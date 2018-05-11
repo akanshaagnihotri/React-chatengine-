@@ -34,8 +34,6 @@ class ChatPage extends Component {
 			console.log(response.data);
 			this.setState({
 				chatData:response.data
-			},()=>{
-				this.ChatListWindow.scrollToPosition((this.state.chatData.length-1)*70);
 			})
 		})
 
@@ -79,6 +77,11 @@ class ChatPage extends Component {
 		    </div>
 		)
 	}
+
+	// handle_scroll = () => {
+	// 	if(this.ChatListWindow)
+ //    		this.ChatListWindow.recomputeRowHeights(0)
+ //  	}
 
 	rowRendererchat= ({style=styles,key,index}) =>{
 		let { chatData} = this.state;
@@ -138,16 +141,15 @@ class ChatPage extends Component {
 				<div style={styles.chatShare}>
 					<div style={styles.innerchatShare}>
 						<AutoSizer>{
-							({width=500, height=700}) =>(
+							({width=500, height=600}) =>(
 									<List
 										ref={(e)=> this.ChatListWindow=e}
-										onScroll={this.onScrollHandler}
-					    				width={width}
+										width={width}
 									    height={height}
 									    rowCount={this.state.chatData.length}
 									    rowHeight={65}
 									    rowRenderer={this.rowRendererchat}
-									    autoheight
+									    
 			 						/>
 								)
 							}
