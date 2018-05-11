@@ -17,3 +17,6 @@ The App is tested to work with Google Chrome only, but using other browsers shou
 
 
 ## ScreenShots
+<img src="https://user-images.githubusercontent.com/30006646/39941377-03b545de-557a-11e8-8beb-71072fdad4ed.PNG" />
+<br/>
+<img src="https://user-images.githubusercontent.com/30006646/39941492-56c9c90c-557a-11e8-8eef-ea85fa105371.PNG" />
